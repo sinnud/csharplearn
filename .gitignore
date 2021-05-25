@@ -1,0 +1,7 @@
+# vscode
+.vscode/
+
+# C sharp binary files
+*/bin/
+*/obj/
+
