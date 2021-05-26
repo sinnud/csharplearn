@@ -1,17 +1,58 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using medianArray;
+/*
+unit test
+
+Compute median of two sorted arrays
+
+https://leetcode.com/problems/median-of-two-sorted-arrays/
+*/
+using System;
+using Xunit;
+
+using medianArray; // test module name
 
 namespace MyTest
 {
-    [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
-        public void TestMethod1()
+        [Fact]
+        public void Test_medianArray_ex1()
         {
-            int [] a = new int[] {1, 2, 3};
-            int [] b = new int[] {1, 5, 6};
-            Assert.Equal(3.0, medianArray.Solution.FindMedianSortedArrays(a, b));
+            Class1 ma = new Class1();
+            int [] nums1 = new int[] {1, 3};
+            int [] nums2 = new int[] {2};
+            Assert.Equal(2.0, ma.FindMedianSortedArrays(nums1, nums2));
+        }
+        [Fact]
+        public void Test_medianArray_ex2()
+        {
+            Class1 ma = new Class1();
+            int [] nums1 = new int[] {1, 2};
+            int [] nums2 = new int[] {3, 4};
+            Assert.Equal(2.5, ma.FindMedianSortedArrays(nums1, nums2));
+        }
+        [Fact]
+        public void Test_medianArray_ex3()
+        {
+            Class1 ma = new Class1();
+            int [] nums1 = new int[] {0, 0};
+            int [] nums2 = new int[] {0, 0};
+            Assert.Equal(0.0, ma.FindMedianSortedArrays(nums1, nums2));
+        }
+        [Fact]
+        public void Test_medianArray_ex4()
+        {
+            Class1 ma = new Class1();
+            int [] nums1 = new int[] {};
+            int [] nums2 = new int[] {1};
+            Assert.Equal(1.0, ma.FindMedianSortedArrays(nums1, nums2));
+        }
+        [Fact]
+        public void Test_medianArray_ex5()
+        {
+            Class1 ma = new Class1();
+            int [] nums1 = new int[] {2};
+            int [] nums2 = new int[] {};
+            Assert.Equal(2.0, ma.FindMedianSortedArrays(nums1, nums2));
         }
     }
 }
