@@ -54,5 +54,21 @@ namespace MyTest
             int [] nums2 = new int[] {};
             Assert.Equal(2.0, ma.FindMedianSortedArrays(nums1, nums2));
         }
+        [Fact]
+        public void Test_medianArray_ex6()
+        {
+            Class1 ma = new Class1();
+            int [] nums1 = new int[] {1, 2};
+            int [] nums2 = new int[] {3, 4, 5};
+            Assert.Equal(3, ma.FindMedianSortedArrays(nums1, nums2));
+        }
+        [Fact]
+        public void Test_medianArray_ex7()
+        {
+            Class1 ma = new Class1();
+            int [] nums1 = new int[] {0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+            int [] nums2 = new int[] {1, 2, 3};
+            Assert.Equal(5, ma.FindMedianSortedArrays(nums1, nums2));
+        }
     }
 }
